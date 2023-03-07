@@ -5,5 +5,5 @@ while i <= 122:
     if i == 101 or i == 113:
         i += 2
         continue
-    print("%c" % (i), end="")
+    print("{:c}".format(i), end="")
     i += 1
