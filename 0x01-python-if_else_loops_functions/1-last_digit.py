@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-t_num = number
 
 if number < 0:
-    t_num *= -1
-ldigit = t_num % 10
+    t_num = number * (-1)
+    ldigit = (t_num % 10) * (-1)
+else:
+    ldigit = number % 10
 
 print(f"Last digit of {number} is {ldigit}", end=" ")
 
