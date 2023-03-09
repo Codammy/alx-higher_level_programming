@@ -8,3 +8,6 @@ def __sumarg(argv):
     for i in range(1, len(argv)):
         summ += int(argv[i])
     print(summ)
+
+
+__sumarg(argv)
