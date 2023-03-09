@@ -10,5 +10,5 @@ def __sumarg(argv):
     print(summ)
 
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     __sumarg(argv)
