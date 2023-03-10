@@ -1,19 +1,15 @@
 #!/usr/bin/python3
 
-# from sys import argv, exit
 import sys
 import calculator_1
 
 
-ln = len(sys.argv) - 1
-if ln != 3:
-    print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-    sys.exit(1)
-
-argv = sys.argv
-
-
 def runcal(argv):
+    ln = len(argv) - 1
+    if ln != 3:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
+
     a = int(argv[1])
     b = int(argv[3])
     operator = argv[2]
@@ -32,4 +28,4 @@ def runcal(argv):
 
 
 if __name__ == "__main__":
-    runcal(argv)
+    runcal(sys.argv)
