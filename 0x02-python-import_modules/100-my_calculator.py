@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+
+# from sys import argv, exit
+import sys
+import calculator_1
+
+
+ln = len(sys.argv) - 1
+if ln != 3:
+    print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+    sys.exit(1)
+
+argv = sys.argv
+
+
+def runcal(argv):
+    a = int(argv[1])
+    b = int(argv[3])
+    operator = argv[2]
+
+    if operator == '+':
+        print("{} + {} = {}".format(a, b, calculator_1.add(a, b)))
+    elif operator == '-':
+        print("{} + {} = {}".format(a, b, calculator_1.sub(a, b)))
+    elif operator == '*':
+        print("{} + {} = {}".format(a, b, calculator.mul(a, b)))
+    elif operator == '/':
+        print("{} + {} = {}".format(a, b, calculator.div(a, b)))
+    else:
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
+
+
+if __name__ == "__main__":
+    runcal(argv)
