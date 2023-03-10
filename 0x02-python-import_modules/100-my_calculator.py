@@ -6,7 +6,6 @@ import calculator_1
 
 def runcal(argv):
     ln = len(argv) - 1
-    print(ln, argv[2])
     if ln != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
