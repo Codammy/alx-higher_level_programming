@@ -10,7 +10,7 @@ if __name__ == "__main__":
     b = int(sys.argv[3])
     opr = str(sys.argv[2])
     if opr not in '+-*/':
-        print("Unknown operator. Available operators: +, -, * and ")
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     if opr == '/':
         print("{} {} {} = {}".format(a, opr, b, div(a, b)))
