@@ -28,10 +28,10 @@ class Square:
         """prints in stdout the square with character #"""
         if self.size == 0:
             print()
+            return
         p, q = self.position
-        while q > 1:
+        for i in range(q):
             print()
-            q -= 1
         for r in range(self.size):
             for i in range(p):
                 print(" ", end="")
