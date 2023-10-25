@@ -17,7 +17,7 @@ class Square:
     def check(self, val, t=None):
         if t == "tup":
             if type(val) is not int or val < 0:
-                raise TypeError("position must be\
+                raise TypeError("position must be \
 a tuple of 2 positive integers")
         else:
             if type(val) is not int:
