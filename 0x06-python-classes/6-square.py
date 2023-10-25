@@ -7,18 +7,19 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """instantiator"""
         self.check(size)
-        if type(position) is not tuple:
+        if type(position) is not tuple or len(position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         for v in position:
-            self.check(v)
+            self.check(v, "tup")
         self.__size = size
         self.__position = position
 
-    def check(self, val):
+    def check(self, val, t=None):
+        v_name = "position" if t == "tup" else "size"
         if type(val) is not int:
-            raise TypeError("size must be an integer")
+            raise TypeError(f"{v_name} must be an integer")
         if val < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError(f"{v_name} must be >= 0")
 
     def area(self):
         """area of square"""
@@ -61,5 +62,5 @@ class Square:
         if type(value) is not tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
         for v in value:
-            self.check(value)
+            self.check(value, "tup")
         self.__position = value
