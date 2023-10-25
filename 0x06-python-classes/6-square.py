@@ -1,17 +1,24 @@
 #!/usr/bin/python3
 """defines an empty class"""
+
+
 class Square:
     """Square"""
     def __init__(self, size=0, position=(0, 0)):
         """instantiator"""
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
+        self.check(size)
         if type(position) is not tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
+        for v in position:
+            self.check(v)
         self.__size = size
         self.__position = position
+
+    def check(self, val):
+        if type(val) is not int:
+            raise TypeError("size must be an integer")
+        if val < 0:
+            raise ValueError("size must be >= 0")
 
     def area(self):
         """area of square"""
@@ -40,10 +47,7 @@ class Square:
     @size.setter
     def size(self, size=0):
         """sets the size of a square"""
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
+        self.check(size)
         self.__size = size
 
     @property
@@ -56,4 +60,6 @@ class Square:
         """sets the position of a square"""
         if type(value) is not tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
+        for v in value:
+            self.check(value)
         self.__position = value
