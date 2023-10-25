@@ -15,11 +15,14 @@ class Square:
         self.__position = position
 
     def check(self, val, t=None):
-        v_name = "position" if t == "tup" else "size"
-        if type(val) is not int:
-            raise TypeError(f"{v_name} must be an integer")
-        if val < 0:
-            raise ValueError(f"{v_name} must be >= 0")
+        if t == "tup":
+            if type(val) is not int or val < 0:
+                raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            if type(val) is not int:
+                raise TypeError("size must be an integer")
+            if val < 0:
+                raise ValueError("size must be >= 0")
 
     def area(self):
         """area of square"""
