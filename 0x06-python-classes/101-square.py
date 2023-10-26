@@ -29,7 +29,7 @@ a tuple of 2 positive integers")
         """prints hash square representation"""
         str = ""
         if self.size == 0:
-            return "\n"
+            return str
         p, q = self.position
         for i in range(q):
             str += "\n"
