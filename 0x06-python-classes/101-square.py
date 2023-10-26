@@ -38,7 +38,8 @@ a tuple of 2 positive integers")
                 str += " "
             for c in range(self.size):
                 str += "#"
-            str += "\n"
+            if r < (self.size - 1):
+                str += "\n"
         return str
 
     def area(self):
