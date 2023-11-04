@@ -21,11 +21,6 @@ class Rectangle:
         self.height = height
         self.__class__.number_of_instances += 1
 
-    def __del__(self):
-        """deletes an object"""
-        self.__class__.number_of_instances -= 1
-        print("Bye rectangle...")
-
     def __str__(self):
         """should print the rectangle with the character #"""
         str = ""
