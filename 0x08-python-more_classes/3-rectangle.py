@@ -33,10 +33,6 @@ class Rectangle:
             str += '\n' if i < (y-1) else ''
         return str
 
-    def __repr__(self):
-        """return a string representation of the rectangle"""
-        return f"Rectangle({self.width}, {self.height})"
-
     def area(self):
         """returns the rectangle area"""
         return self.width * self.height
@@ -73,17 +69,3 @@ class Rectangle:
         if type(height) is not int:
             raise TypeError("height must be an integer")
         self.__height = height
-
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        """returns the biggest rectangle based on the area"""
-        if type(rect_1) is not Rectangle:
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        if type(rect_2) is not Rectangle:
-            raise TypeError("rect_2 must be an instance of Rectangle")
-        return rect_2 if rect_2.area > rect_1.area else rect_1
-
-    @classmethod
-    def square(cls, size=0):
-        """returns a new Rectangle instance with width == height == size"""
-        return Rectangle(size, size)
