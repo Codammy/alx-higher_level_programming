@@ -21,7 +21,7 @@ class Rectangle:
         self.height = height
         self.__class__.number_of_instances += 1
 
-   def __str__(self):
+    def __str__(self):
         """should print the rectangle with the character #"""
         str = ""
         x, y = self.width, self.height

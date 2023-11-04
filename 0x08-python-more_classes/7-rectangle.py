@@ -19,6 +19,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.width = width
         self.height = height
+        self.print_symbol = Rectangle.print_symbol
         self.__class__.number_of_instances += 1
 
     def __del__(self):
@@ -34,7 +35,7 @@ class Rectangle:
             return str
         for i in range(y):
             for j in range(x):
-                str += Rectangle.print_symbol
+                str += f"{self.print_symbol}"
             str += '\n' if i < (y-1) else ''
         return str
 
