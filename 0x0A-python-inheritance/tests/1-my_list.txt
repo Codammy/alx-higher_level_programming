@@ -1,0 +1,9 @@
+'''doctest for function class MyList
+=================================================
+	first import class from file
+		>>> sublist = __import__("1-my_list").MyList
+	create an instance
+		>>> lizt = sublist(31425)
+==================================================
+>>> lizt.print_sorted()
+'''

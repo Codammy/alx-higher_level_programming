@@ -1,0 +1,9 @@
+'''doctest for integer validator
+======================== Test Case =================================
+	first import class from file 6-base_geometry.py
+		>>> BaseGeometry = __import__("6-base_geometry").BaseGeometry
+	create instance
+		>>> geo = BaseGeometry()
+=========================== Cases ==================================
+>>> geo.integer_validator()
+'''
