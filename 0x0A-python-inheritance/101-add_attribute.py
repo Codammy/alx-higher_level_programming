@@ -6,5 +6,5 @@ def add_attribute(obj, name, desc):
     """adds a new attribute to an object if its possible"""
     try:
         obj.name = desc
-    except:
+    except Exception:
         raise TypeError("can't add new attribute")
