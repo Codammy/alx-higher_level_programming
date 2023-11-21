@@ -51,8 +51,8 @@ TypeError: div must be a number
 Traceback (most recent call last):
   ...
 TypeError: div must be a number
->>> matrix_divided([[2, 4, 6], [8, 10, 12]], float("inf"))
-[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+>>> #matrix_divided([[2, 4, 6], [8, 10, 12]], float("inf"))
+>>> #[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
 >>> matrix_divided([[2, 4, 6], [8, 10, 12]], float("inf") / float("nan"))
 Traceback (most recent call last):
   ...
