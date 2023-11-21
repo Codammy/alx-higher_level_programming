@@ -1,0 +1,20 @@
+"""
+doctest for function say_my_name(first_name, last_name="")
+
+>>> say = __import__("3-say_my_name").say_my_name
+>>> say("Oguntola", "Damilola")
+My name is Oguntola Damilola
+>>> say()
+Traceback (most recent call last):
+  ...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+>>> say("Damilola", 2)
+Traceback (most recent call last):
+  ...
+TypeError: last_name must be a string
+>>> say(2, "Damilola")
+Traceback (most recent call last):
+  ...
+TypeError: first_name must be a string
+
+"""
