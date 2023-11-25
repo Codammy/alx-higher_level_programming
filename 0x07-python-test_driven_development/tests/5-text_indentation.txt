@@ -12,9 +12,9 @@ TypeError: text must be a string
 >>> text_indentation("Hello World! My name's Damilola, i go by the alias: Codam. Will you be my friend?")
 Hello World! My name's Damilola, i go by the alias:
 <BLANKLINE>
- Codam.
+Codam.
 <BLANKLINE>
- Will you be my friend?
+Will you be my friend?
 <BLANKLINE>
 >>> text_indentation("\n\n")
 <BLANKLINE>
