@@ -1,0 +1,21 @@
+""" Test for function text_indentation(text) """
+==== doctest ====
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+>>> text_indentation()
+Traceback (most recent call last):
+  ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation(True)
+Traceback (most recent call last):
+  ...
+TypeError: text must be a string
+>>> text_indentation("Hello World! My name's Damilola, i go by the alias: Codam. Will you be my friend?")
+Hello World! My name's Damilola, i go by the alias:
+<BLANKLINE>
+ Codam.
+<BLANKLINE>
+ Will you be my friend?
+<BLANKLINE>
+>>> text_indentation("\n\n")
+<BLANKLINE>
+<BLANKLINE>
