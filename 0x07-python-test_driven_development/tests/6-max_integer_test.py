@@ -14,6 +14,9 @@ class TestMax(unittest.TestCase):
         self.assertEqual(max_integer("AB"), 'B')
         self.assertEqual(max_integer([0, -1, -2, -3, -4]), 0)
         self.assertEqual(max_integer([0.1, 0.001, 0.0001, 0.010, 0.1001]), 0.1001)
+        self.assertEqual(max_integer([0.1, 0.001, 1, 0.010, 0.1001]), 1)
+        self.assertEqual(max_integer([1, 1, 1, 1, 1]), 1)
+        self.assertEqual(max_integer([]), None)
     
     def test_type(self):
         """type check args"""
