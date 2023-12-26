@@ -1,3 +1,4 @@
+-- selects and order with a condition
 SELECT score, name
 FROM second_table 
 WHERE score >= 10
