@@ -4,17 +4,16 @@ const len = argv.length;
 let big;
 
 if (len < 4) { console.log(0); } else {
-  big = Number(argv[2]);
-  for (let i = 2; i < len; i++) {
-    if (big < Number(argv[i])) { big = Number(argv[i]); }
+  let n = 0;
+  while (n < len) {
+    for (let i = len - 1; i > 2; i--) {
+      if (argv[i] > argv[i - 1]) {
+        big = argv[i];
+        argv[i] = argv[i - 1];
+        argv[i - 1] = big;
+      }
+    }
+    n++;
   }
+  console.log(argv[3]);
 }
-let newBig = big;
-for (let i = 2; i < len; i++) {
-	if (newBig >= Number(argv[i]) && newBig !== big)
-	{
-		console.log(newBig);
-		break;
-	}
-	newBig = Number(argv[i])
-  }
