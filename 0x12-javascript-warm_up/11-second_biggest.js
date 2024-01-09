@@ -8,5 +8,13 @@ if (len < 4) { console.log(0); } else {
   for (let i = 2; i < len; i++) {
     if (big < Number(argv[i])) { big = Number(argv[i]); }
   }
-  console.log(big);
 }
+let newBig = big;
+for (let i = 2; i < len; i++) {
+	if (newBig >= Number(argv[i]) && newBig !== big)
+	{
+		console.log(newBig);
+		break;
+	}
+	newBig = Number(argv[i])
+  }
