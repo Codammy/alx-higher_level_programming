@@ -21,5 +21,5 @@ if __name__ == "__main__":
             name='{}'".format(to_match))
     values = cursor.fetchall()
     for v in values:
-        if v == to_match:
+        if v[1] == to_match:
             print(v)
