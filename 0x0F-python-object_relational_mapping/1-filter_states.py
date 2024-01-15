@@ -15,5 +15,5 @@ if __name__ == "__main__":
             LIKE 'N%' ORDER BY id ASC")
     values = current.fetchall()
     for v in values:
-        if v[0][1] == 'N':
+        if v[1][0] == 'N':
             print(v)
