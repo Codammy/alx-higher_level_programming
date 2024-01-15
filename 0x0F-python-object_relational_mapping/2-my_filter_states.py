@@ -18,7 +18,7 @@ if __name__ == "__main__":
                            user=usr)
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM states WHERE\
-            name=%s", (to_match, ))
+            name='{}'".format(to_match))
     values = cursor.fetchall()
     for v in values:
         print(v)
