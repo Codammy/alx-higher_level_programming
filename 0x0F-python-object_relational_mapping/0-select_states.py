@@ -3,15 +3,17 @@
 """
 
 if __name__ == '__main__':
-    import MySQLdb, sys
-    uname, passwd, dbname = sys.argv[1:]
-    conn = MySQLdb.connect(host: "localhost", port: 3306, user: uname, passwd: passwd, charset: "utf-8")
+    import MySQLdb
+    import sys
+    uname, passdb, dbname = sys.argv[1:]
+    conn = MySQLdb.connect(host="localhost",
+                           port=3306, user=uname,
+                           passwd=passdb, db=dbname,
+                           charset="utf8")
     cur = conn.cursor()
-    cur.execute("SELECT * FROM state ORDER BY id")
+    cur.execute("SELECT * FROM states ORDER BY id")
     query_rows = cur.fetchall()
-    i = 0;
     for row in query_rows:
-        print(f"({i}, {row})")
-        i++
+        print(f"{row}")
     cur.close()
     conn.close()
