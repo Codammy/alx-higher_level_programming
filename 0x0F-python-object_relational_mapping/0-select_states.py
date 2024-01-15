@@ -5,7 +5,7 @@
 if __name__ == '__main__':
     import MySQLdb, sys
     uname, passwd, dbname = sys.argv[1:]
-    conn = MySQLdb.connect(host: "localhost", port: 3306, user: uname, passwd: passwd, charset="utf-8")
+    conn = MySQLdb.connect(host: "localhost", port: 3306, user: uname, passwd: passwd, charset: "utf-8")
     cur = conn.cursor()
     cur.execute("SELECT * FROM state ORDER BY id")
     query_rows = cur.fetchall()
