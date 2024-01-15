@@ -14,6 +14,8 @@ if __name__ == "__main__":
     current.execute("SELECT * FROM states WHERE name \
             LIKE 'N%' ORDER BY id ASC")
     values = current.fetchall()
+    current.close()
+    con.close()
     for v in values:
         if v[1][0] == 'N':
             print(v)
