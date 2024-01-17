@@ -19,7 +19,7 @@ if __name__ == "__main__":
     cursor = conn.cursor()
     cursor.execute("SELECT cities.name FROM cities\
             JOIN states ON cities.state_id = states.id\
-            WHERE states.name='{}' ORDER BY cities.id ASC".format(state))
+            WHERE states.name=%s ORDER BY cities.id ASC", (state, ))
     data = cursor.fetchall()
     dl = len(data)
     for d in data:
