@@ -23,6 +23,5 @@ if __name__ == "__main__":
     data = cursor.fetchall()
     dl = len(data)
     for d in data:
-        e = ""
         print(d[0], end=", " if 1 < dl else "\n")
         dl -= 1

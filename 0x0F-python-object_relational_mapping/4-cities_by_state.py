@@ -12,7 +12,7 @@ if __name__ == "__main__":
                            db=dbname, port=3306,
                            user=usr)
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM cities ORDER BY id ASC")
+    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities JOIN states ON states.id = state_id ORDER BY cities.id ASC")
     values = cursor.fetchall()
     for v in values:
         print(v)
