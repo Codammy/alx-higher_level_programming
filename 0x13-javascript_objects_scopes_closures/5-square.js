@@ -1,11 +1,10 @@
 #!/usr/bin/node
 const stdout = require('process').stdout;
-class Rectangle {
-  constructor (w, h) {
-    if (w > 0 && h > 0) {
-      this.width = w;
-      this.height = h;
-    }
+const Rectangle = require('./4-rectangle');
+
+class Square extends Rectangle {
+  constructor (size) {
+    super(size, size);
   }
 
   print () {
@@ -28,4 +27,4 @@ class Rectangle {
     this.height *= 2;
   }
 }
-module.exports = Rectangle;
+module.exports = Square;
