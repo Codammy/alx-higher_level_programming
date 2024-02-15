@@ -5,4 +5,5 @@ const newList = list.map(item => {
   index++;
   return (item * index);
 });
-console.log(list, newList);
+console.log(list)
+console.log(newList);
