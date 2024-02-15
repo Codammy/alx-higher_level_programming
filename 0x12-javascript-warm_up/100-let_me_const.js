@@ -1,5 +1,5 @@
 #!/usr/bin/node
-var myVar = 333;
+const myVar = 333;
 module.export = {
-	myVar
-}
+  myVar
+};
