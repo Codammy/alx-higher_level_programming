@@ -1,6 +1,5 @@
 #!/usr/bin/node
+let nPrinted = 0;
 exports.logMe = function (item) {
-  nPrinted = 0;
-  const log = () => console.log(`${nPrinted++}: ${item}`);
-  log();
+  console.log(`${nPrinted++}: ${item}`);
 };
