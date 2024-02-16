@@ -1,5 +1,2 @@
--- selects and order with a condition
-SELECT score, name
-FROM second_table 
-WHERE score >= 10
-ORDER BY score DESC;
+-- list all record with a score >= 10
+SELECT score, name FROM second_table WHERE score>=10 ORDER BY score DESC;
