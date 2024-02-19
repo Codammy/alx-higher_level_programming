@@ -1,7 +1,4 @@
-!/usr/bin/python3
-"""lists all states from the database hbtn_0e_0_usa"""
-
-
+#!/usr/bin/python3
 import MySQLdb
 import sys
 user, passwd, db = sys.argv[1:]
