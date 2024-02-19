@@ -9,8 +9,10 @@ if __name__ == "__main__":
     Engine = MySQLdb.connect(host="localhost", port=3306, user=user,
                              passwd=passwd, db=db)
     cursor = Engine.cursor()
-    cursor.execute('select * from states where name="{}" order by id asc'.format(match_))
+    cursor.execute('select * from states where name="{}" \
+            order by id asc'.format(match_))
     for row in cursor.fetchall():
-        print(row)
+        if row[1][0] == match_:
+            print(row)
     cursor.close()
     Engine.close()

@@ -11,6 +11,7 @@ if __name__ == "__main__":
     cursor = Engine.cursor()
     cursor.execute('select * from states where name like "N%" order by id asc')
     for row in cursor.fetchall():
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
     cursor.close()
     Engine.close()
