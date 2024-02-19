@@ -12,3 +12,5 @@ cursor = Engine.cursor()
 cursor.execute('select * from states order by id asc')
 for row in cursor.fetchall():
     print(row)
+cursor.close()
+Engine.close()
