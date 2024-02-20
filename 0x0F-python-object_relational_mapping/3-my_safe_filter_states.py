@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""displays all values in the states table of hbtn_0e_0_usa
+"""
+displays all values in the states table of hbtn_0e_0_usa
 where name matches the argument
 """
 
@@ -14,7 +15,7 @@ if __name__ == "__main__":
     cursor.execute('select * from states where name="{}" \
             order by id asc'.format(match_))
     for row in cursor.fetchall():
-        if row[1][0] == match_
-        print(row)
+        if row[1] == match_:
+            print(row)
     cursor.close()
     Engine.close()
