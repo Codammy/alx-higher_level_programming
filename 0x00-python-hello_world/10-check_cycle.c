@@ -8,12 +8,17 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *start = list;
+	listint_t *begin;
 
 	while (list)
 	{
-		if (start == list->next)
-			return (1);
+		begin = list->next;
+		while (begin)
+		{
+			if (begin == list)
+				return (1);
+			begin = begin->next;
+		}
 		list = list->next;
 	}
 
