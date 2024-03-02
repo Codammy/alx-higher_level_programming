@@ -1,5 +1,0 @@
-#!/usr/bin/bash
-chmod u+x *.py
-git add .
-git commit -m "$(ls -t | head -2)"
-git push
