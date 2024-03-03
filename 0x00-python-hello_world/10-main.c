@@ -32,7 +32,11 @@ int main(void)
 	current = head;
 	for (i = 0; i < 6; i++)
 	{
+<<<<<<< HEAD
 		if (i == 4)
+=======
+		if (i == 3)
+>>>>>>> refs/remotes/origin/master
 			temp = current;
 		current = current->next;
 	}
@@ -52,4 +56,8 @@ int main(void)
 	free_listint(head);
 
 	return (0);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> refs/remotes/origin/master
