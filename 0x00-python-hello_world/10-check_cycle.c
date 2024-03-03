@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * check_cycle - checks for a palindrome in a linked list
@@ -8,18 +9,18 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *begin;
+	listint_t *current = list->next, *head = list;
 
-	while (list)
+	while (current)
 	{
-		begin = list->next;
-		while (begin)
+		while (list->next != current)
 		{
-			if (begin == list)
+			if (current->next == list)
 				return (1);
-			begin = begin->next;
+			list = list->next;
 		}
-		list = list->next;
+		current = current->next;
+		list = head;
 	}
 
 	return (0);
