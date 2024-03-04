@@ -13,16 +13,15 @@ int check_cycle(listint_t *list)
 
 	while (curr)
 	{
-		while (list)
+		if (curr->next == list)
+			return (1);
+		if (curr == list)
 		{
-			if (curr->next == list || curr->next == curr)
-				return (1);
-			if (curr == list)
-				break;
-			list = list->next;
+			list = head;
+			curr = curr->next;
+			continue;
 		}
-		curr = curr->next;
-		list = head;
+		list = list->next;
 	}
 	return (0);
 }
