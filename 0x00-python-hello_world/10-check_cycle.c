@@ -9,24 +9,20 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *current = list->next, *head = list;
+	listint_t *curr = list, *head = list;
 
-	if (list->next == list)
-		return (1);
-	while (current)
+	while (curr)
 	{
-
-		if (current->next == current)
-			return (1);
-		while (list->next != current)
+		while (list)
 		{
-			if (current->next == list)
+			if (curr->next == list || curr->next == curr)
 				return (1);
+			if (curr == list)
+				break;
 			list = list->next;
 		}
-		current = current->next;
+		curr = curr->next;
 		list = head;
 	}
-
 	return (0);
 }
