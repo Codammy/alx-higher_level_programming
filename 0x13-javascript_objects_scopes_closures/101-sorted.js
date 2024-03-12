@@ -11,6 +11,5 @@ for (let k in dict) {
 		newObj[v] = [ k ];
 	}
 }
-console.log(dict);
 console.log(newObj);
 
