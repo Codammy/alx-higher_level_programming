@@ -9,7 +9,7 @@ if (!number) { console.log('Missing size'); } else {
   while (c > 0) {
     str += 'X';
     c--;
-    if ((c % number === 0) && c != 0) {
+    if ((c % number === 0) && c !== 0) {
       str += '\n';
     }
   }
