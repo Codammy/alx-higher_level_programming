@@ -2,7 +2,7 @@
 exports.callMeMoby = function (t, func) {
   let n = 0;
   while (n < t) {
-    func()
+    func();
     n++;
   }
 };
