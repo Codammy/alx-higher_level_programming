@@ -30,4 +30,4 @@ $ sudo apt-get install -y nodejs
 
 **Documentation**
 
-`$ sudo npm install semistandard --global1`
+`$ sudo npm install semistandard --global`
