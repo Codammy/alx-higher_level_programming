@@ -1,12 +1,12 @@
 #!/usr/bin/node
 
-const ParentSquare = require("./5-square.js");
+const ParentSquare = require('./5-square.js');
 
 class Square extends ParentSquare {
-  charPrint(c) {
-    c = c ? c : "X";
+  charPrint (c) {
+    c = c || 'X';
     for (let i = 0; i < this.height; i++) {
-      let element = "";
+      let element = '';
       for (let j = 0; j < this.width; j++) {
         element += c;
       }
