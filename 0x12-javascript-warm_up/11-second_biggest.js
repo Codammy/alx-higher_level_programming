@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const argv = require('process').argv;
+const argv = require("process").argv;
 const list = argv.splice(2);
 
 if (!list || !list[1]) {
@@ -13,6 +13,7 @@ if (!list || !list[1]) {
       biggest = list[i];
     }
   }
+
   secondBiggest = 0;
   for (let i = 0; i < list.length; i++) {
     if (list[i] < biggest && list[i] >= secondBiggest) {
