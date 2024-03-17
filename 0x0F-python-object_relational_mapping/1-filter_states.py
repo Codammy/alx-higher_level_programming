@@ -16,4 +16,5 @@ if __name__ == '__main__':
     cur = conn.cursor()
     cur.execute('select * from states where name like "N%" order by id asc')
     for state in cur.fetchall():
-        print(state)
+        if state[1][0] == 'N':
+            print(state)

@@ -20,4 +20,5 @@ if __name__ == '__main__':
     cur.execute('select * from states where name=%s order by id asc',
                 (searched, ))
     for state in cur.fetchall():
-        print(state)
+        if state[1] == searched:
+            print(state)
