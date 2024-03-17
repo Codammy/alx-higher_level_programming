@@ -7,17 +7,16 @@ if (!list || !list[1]) {
   console.log(0);
 } else {
   let secondBiggest;
-  let biggest = list[0];
+  let biggest = Number(list[0]);
   for (let i = 0; i < list.length; i++) {
-    if (list[i] > biggest) {
-      biggest = list[i];
+    if (Number(list[i]) > biggest) {
+      biggest = Number(list[i]);
     }
   }
-
   secondBiggest = 0;
   for (let i = 0; i < list.length; i++) {
-    if (list[i] < biggest && list[i] >= secondBiggest) {
-      secondBiggest = list[i];
+    if (Number(list[i]) < biggest && Number(list[i]) >= secondBiggest) {
+      secondBiggest = Number(list[i]);
     }
   }
   console.log(secondBiggest);
