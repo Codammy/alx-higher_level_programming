@@ -17,8 +17,8 @@ if __name__ == '__main__':
                            passwd=key,
                            db=db)
     cur = conn.cursor()
-    cur.execute('select * from states where name=%s order by id asc',
-                (searched, ))
+    cur.execute('select * from states where name="{}" order \
+                 by id asc'.format(searched))
     for state in cur.fetchall():
         if state[1] == searched:
             print(state)
