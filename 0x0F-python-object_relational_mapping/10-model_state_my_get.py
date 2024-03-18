@@ -11,11 +11,11 @@ if __name__ == '__main__':
     from sqlalchemy.orm import sessionmaker
     from model_state import (Base, State)
 
-    nm, key, db, searched= sys.argv[1:]
+    nm, key, db, searched = sys.argv[1:]
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                            format(nm, key, db))
+                           format(nm, key, db))
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)()
-    data = session.query(State).filter(State.name == searched)\
-                         .order_by(State.id).first()
+    data = session.query(State).filter(State.name == searched).\
+        order_by(State.id).first()
     print(f'{data.id if data else "Not found"}')
