@@ -10,12 +10,12 @@ if __name__ == '__main__':
 
     uname, key, db = sys.argv[1:]
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                            format(uname, key, db))
+                           format(uname, key, db))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     data = session.query(State).order_by(State.id)
-    print(data)
     for d in data:
         print(f'{d.id}: {d.name}')
+    session.close()

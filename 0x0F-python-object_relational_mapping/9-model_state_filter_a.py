@@ -12,11 +12,13 @@ if __name__ == "__main__":
     import sys
 
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".
-                            format(*sys.argv[1:]))
+                           format(*sys.argv[1:]))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    data = session.query(State).filter(State.name.ilike('%a%')).order_by(State.id)
+    data = session.query(State).filter(State.name.ilike('%a%')).\
+        order_by(State.id)
     for d in data:
         print(f'{d.id}: {d.name}')
+    session.close()

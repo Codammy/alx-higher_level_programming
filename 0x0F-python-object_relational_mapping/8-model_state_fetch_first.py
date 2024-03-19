@@ -11,10 +11,10 @@ if __name__ == '__main__':
     import sys
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                            format(*sys.argv[1:]))
+                           format(*sys.argv[1:]))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
     data = session.query(State).order_by(State.id).first()
     print(f'{data.id}: {data.name}')
-
+    session.close()

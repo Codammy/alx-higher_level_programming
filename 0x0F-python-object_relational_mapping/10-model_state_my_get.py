@@ -19,3 +19,4 @@ if __name__ == '__main__':
     data = session.query(State).filter(State.name == searched).\
         order_by(State.id).first()
     print(f'{data.id if data else "Not found"}')
+    session.close()
