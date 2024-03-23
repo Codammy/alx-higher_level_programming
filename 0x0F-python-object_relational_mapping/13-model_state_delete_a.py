@@ -14,7 +14,8 @@ if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
                            format(*sys.argv[1:]))
     session = sessionmaker(bind=engine)()
-    state = session.query(State).filter(name).ilike("%a%")
-    session.delete(state)
+    states = session.query(State).filter(State.name.ilike("%a%"))
+    for state in states:
+        session.delete(state)
     session.commit()
     session.close()
