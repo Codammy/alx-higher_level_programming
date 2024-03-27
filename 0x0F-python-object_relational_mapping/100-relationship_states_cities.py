@@ -18,12 +18,14 @@ if __name__ == '__main__':
 
     new_state = State()
     new_state.name = 'California'
-    new_state.cities.append('San Francisco')
-
-    new_city = City()
-    new_city.name = 'San Francisco'
+    # new_state.cities.append('San Francisco')
 
     session.add(new_state)
+    session.commit()
+    new_city = City()
+    new_city.name = 'San Francisco'
+    new_city.state_id = new_state.id
+
     session.add(new_city)
 
     session.commit()
