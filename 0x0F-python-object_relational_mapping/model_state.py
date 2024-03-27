@@ -5,7 +5,7 @@ and an instance Base = declarative_base():
 """
 import sys
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import relationship, declarative_base
+from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 
@@ -15,4 +15,3 @@ class State(Base):
 
     id = Column(Integer, primary_key=True, autoincrement='auto')
     name = Column(String(128))
-    cities = relationship('City', backref='state', cascade='all, delete-orphan')
