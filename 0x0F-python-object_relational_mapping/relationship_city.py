@@ -3,6 +3,7 @@
 from relationship_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
 
+
 class City(Base):
     """city class"""
     __tablename__ = 'cities'
