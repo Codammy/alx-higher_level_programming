@@ -10,7 +10,7 @@ if __name__ == '__main__':
     from urllib import request, parse
     import sys
 
-    params = { 'email': sys.argv[2] }
+    params = {'email': sys.argv[2]}
     params = parse.urlencode(params).encode('ascii')
     req = request.Request(sys.argv[1])
     with request.urlopen(req) as res:
