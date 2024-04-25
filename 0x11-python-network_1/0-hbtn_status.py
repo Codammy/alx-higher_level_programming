@@ -10,5 +10,5 @@ if __name__ == '__main__':
         data = res.read()
         custom_h = (data, type(data), data.decode())
         print('Body response:')
-        print('   - type: {}\n   - content: {}\n   - utf8 content: {}'
+        print('    - type: {}\n    - content: {}\n    - utf8 content: {}'
               .format(*custom_h))
