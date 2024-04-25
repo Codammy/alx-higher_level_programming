@@ -1,5 +1,5 @@
 # Python - Netwotk #1
-
+`Python` `Scripting` `Back-end` `API`
 ## General
 * How to fetch internet resources with the Python package urllib
 * How to decode urllib body response
