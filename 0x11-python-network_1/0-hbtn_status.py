@@ -8,7 +8,7 @@ if __name__ == '__main__':
     req = request.Request(url)
     with request.urlopen(req) as res:
         data = res.read()
+        custom_h = (data, type(data), data.decode())
         print('Body response:')
-        print(f'\t- type: {type(data)}\n\t\
-- content: {data}\n\t\
-- utf8 content: {str(data.decode())}')
+        print('- type: {}\n   - content: {}\n   - utf8 content: {}'
+              .format(*custom_h))
