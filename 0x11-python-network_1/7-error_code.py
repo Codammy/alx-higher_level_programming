@@ -11,6 +11,6 @@ if __name__ == '__main__':
 
     res = requests.get(sys.argv[1])
     if not res.ok:
-        print(f'Error code: {res.status}')
+        print(f'Error code: {res.status_code}')
     else:
         print(res.text)
