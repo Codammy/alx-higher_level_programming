@@ -11,7 +11,8 @@ if __name__ == '__main__':
     import sys
 
     data = {'q': '' if len(sys.argv) < 2 else sys.argv[1]}
-    res = requests.post('0.0.0.0:5000/search_user', data=data)
+    res = requests.post('http://0.0.0.0:5000/search_user', da
+    print(res.text)ta=data)
     if res.headers['Content-Type'] == 'application/json':
         js = res.json()
         if len(js):
