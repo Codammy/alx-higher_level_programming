@@ -11,9 +11,10 @@ if __name__ == '__main__':
 
     user, key = sys.argv[1:]
     auth = {"user": user, "password": key}
-    res = requests.get(f'https://api.github.com/users/{user}',
+    res = requests.get(f'https://api.github.com/user',
                        auth=(user, key))
     json_data = res.json()
+    # print(json_data)
     if res.ok:
         print(json_data['id'])
     else:
