@@ -8,15 +8,13 @@ if __name__ == '__main__':
     import sys
     import requests
 
-    owner, repo = sys.argv[1:]
+    repo, owner = sys.argv[1:]
     r = requests.get(f'https://api.github.com/repos/{owner}/{repo}/commits',
                      params={"per_page": 10}
                      )
-    print(r.url)
-    print(owner, repo)
-    json_data = r.json()
-    print(json_data)
-#        for data in r.json():
-#            sha = data['sha']
-#            commit = data['commit']
-#            print('{}: {}'.format(sha, commit['author']['name']))
+    if r.ok:
+        json_data = r.json()
+        for data in json_data:
+            sha = data['sha']
+            commit = data['commit']
+            print('{}: {}'.format(sha, commit['author']['name']))
