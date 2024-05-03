@@ -12,9 +12,9 @@ if __name__ == '__main__':
     r = requests.get(f'https://api.github.com/repos/{owner}/{repo}/commits',
                      params={"per_page": 10}
                      )
-    # if r.ok:
-    json_data = r.json()
-    for data in json_data:
-        sha = data['sha']
-        commit = data['commit']
-        print('{}: {}'.format(sha, commit['author']['name']))
+    if r.ok:
+        json_data = r.json()
+        for data in r.json():
+            sha = data['sha']
+            commit = data['commit']
+            print('{}: {}'.format(sha, commit['author']['name']))
