@@ -12,6 +12,7 @@ if __name__ == '__main__':
     r = requests.get(f'https://api.github.com/repos/{owner}/{repo}/commits',
                      params={"per_page": 10}
                      )
+    print(r.url)
     json_data = r.json()
     print(json_data)
 #        for data in r.json():
