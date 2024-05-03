@@ -13,7 +13,8 @@ if __name__ == '__main__':
                      params={"per_page": 10}
                      )
     # if r.ok:
-    for data in r.json():
+    json_data = r.json()
+    for data in json_data:
         sha = data['sha']
         commit = data['commit']
         print('{}: {}'.format(sha, commit['author']['name']))
