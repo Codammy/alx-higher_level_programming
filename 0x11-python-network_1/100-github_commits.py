@@ -13,6 +13,7 @@ if __name__ == '__main__':
                      params={"per_page": 10}
                      )
     print(r.url)
+    print(owner, repo)
     json_data = r.json()
     print(json_data)
 #        for data in r.json():
