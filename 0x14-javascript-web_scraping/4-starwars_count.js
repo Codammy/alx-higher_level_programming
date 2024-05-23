@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-const URL = 'https://swapi-api.alx-tools.com/api/films/';
+const URL = require('process').argv[2];
 
 let count = 0;
 request(URL, (err, res, dt) => {
