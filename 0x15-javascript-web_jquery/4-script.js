@@ -1,5 +1,5 @@
-$("DIV#red_header").on("click", (colorHanlder(e.target.previousElementSibling))
-function colorHandler(element) {
-	element.classList.toggle("red");
-	element.classList.toggle("green");
+const elem = $('DIV#toggle_header');
+elem.on('click', colorHandler);
+function colorHandler () {
+  elem.prev().toggleClass('red green');
 }
